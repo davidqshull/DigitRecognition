@@ -50,7 +50,7 @@ public class Driver1 {
                 int expectedDigit = labels[i];
 
                 // Train network on data
-                myNet.run(currentImage, expectedDigit);
+                myNet.updateWeights(currentImage, expectedDigit);
 
                 // Record if guess was incorrect
                 if (myNet.getDigit() != expectedDigit) {

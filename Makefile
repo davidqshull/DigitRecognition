@@ -1,6 +1,6 @@
 all:
 	javac *.java
-	java Driver2
+	java Driver1
 
 clean:
 	rm *.class

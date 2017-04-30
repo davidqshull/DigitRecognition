@@ -65,13 +65,13 @@ public class NeuralNetwork {
         }
     }
 
-    public void run(SillyImage img, int expectedDigit) {
+    public void updateWeights(SillyImage img, int expectedDigit) {
         processInput(img);
         error(expectedDigit);
         for(int i = 0; i < output.length; i++) {
             for(int j = 0; j < input.length; j++) {
                 double temp = weights[j][i];
-                temp += alpha * errors[i] * output[i] * (1 - output[i]) * input[j] * Math.random();
+                temp += alpha * errors[i] * output[i] * (1 - output[i]) * input[j];
                 weights[j][i] = temp;
             }
         }
